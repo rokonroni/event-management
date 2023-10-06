@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
+
 
 const Navbar = () => {
+    const {user , logOut} = useContext(AuthContext);
+    const defultURL= "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
   const NavLinks = 
     <>
       <li>
@@ -8,8 +13,8 @@ const Navbar = () => {
                   isPending
                     ? "bg-none"
                     : isActive
-                    ? "text-[#FF444A] font-bold text-lg "
-                    : "font-bold text-lg hover:bg-transparent hover:text-[#FF444A] focus:bg-white focus:text-[#FF444A]"
+                    ? "text-[#FF444A] font-bold underline text-lg "
+                    : "font-bold underline text-lg hover:bg-transparent hover:text-[#FF444A] focus:bg-white focus:text-[#FF444A]"
                 }>Home</NavLink>
       </li>
       <li>
@@ -17,13 +22,16 @@ const Navbar = () => {
                   isPending
                     ? "bg-none"
                     : isActive
-                    ? "text-[#FF444A] font-bold text-lg "
-                    : "font-bold text-lg hover:bg-transparent hover:text-[#FF444A] focus:bg-white focus:text-[#FF444A]"}>Contact Us</NavLink>
+                    ? "text-[#FF444A] underline font-bold text-lg "
+                    : "font-bold text-lg underline hover:bg-transparent hover:text-[#FF444A] focus:bg-white focus:text-[#FF444A]"}>Contact Us</NavLink>
       </li>
     </>
+  
+
   return (
-    <div className="container bg-transparent mx-auto">
-      <div className="navbar ">
+       <div className="container mx-auto">
+          <div className="fixed z-10 text-white bg-transparent container mx-auto">
+      <div className="navbar mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -49,7 +57,7 @@ const Navbar = () => {
              {NavLinks}
             </ul>
           </div>
-          <a className="normal-case text-2xl font-bold">
+          <a href="/" className="normal-case text-4xl font-bold">
             Event <span className="text-red-600 "> Management</span>
           </a>
         </div>
@@ -59,12 +67,28 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to='/login' className="btn bg-red-500 text-white font-bold hover:bg-red-700">
-            Login
-          </Link>
-        </div>
+
+                    {
+                        user?.email ?
+                        <div className="flex gap-2 items-center"> 
+                            <p>{user.displayName}</p>
+                            <button 
+                            onClick={logOut}
+                            className="btn btn-sm bg-transparent text-white border-white hover:bg-transparent hover:text-red-600 hover:font-bold hover:border-red-600 ">Log out</button>
+                            <div className="w-10 h-10 rounded-full border overflow-hidden">
+                                    <img src={user?.photoURL ? user?.photoURL : defultURL} />
+                              </div>
+                        </div>
+                            :
+                            <Link to='/login'>
+                                <button className="btn btn-sm  btn-ghost">Login</button>
+                            </Link>
+                    }
+                </div>
       </div>
     </div>
+       </div>
+   
   );
 };
 

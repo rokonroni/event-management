@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Weddings",
+    "image": "https://i.ibb.co/yyTFnYz/photo-1597861405049-0b011428568f-ixlib-rb-4-0.jpg",
+    "price": "Starting at $1000",
+    "shortDescription": "Make your wedding day truly special with our services.",
+    "fullDescription": "Our wedding planning services are designed to make your special day truly memorable. We offer a wide range of options to suit your preferences and ensure that every detail is taken care of. Whether you dream of a grand wedding or an intimate ceremony, we have you covered."
+  },
+  {
+    "id": 2,
+    "name": "Birthday Parties",
+    "image": "https://i.ibb.co/KN1D3Qw/photo-1478145787956-f6f12c59624d-ixlib-rb-4-0.jpg",
+    "price": "Starting at $250",
+    "shortDescription": "Celebrate birthdays in style with our party planning expertise.",
+    "fullDescription": "Planning a birthday party? Let us take care of the details while you enjoy the celebration. Our experienced team will create a fun and memorable event that suits your theme and budget. From decorations to entertainment, we've got it all covered."
+  },
+  {
+    "id": 3,
+    "name": "Anniversaries Parties",
+    "image": "https://i.ibb.co/pjbYFTF/photo-1641933002462-6b4903f84ed3-ixlib-rb-4-0.jpg",
+    "price": "Starting at $500",
+    "shortDescription": "Create memorable anniversary events with our assistance.",
+    "fullDescription": "Celebrate your milestone anniversaries with elegance and style. Our anniversary event planning services are tailored to your unique story, ensuring that your celebration reflects the love and commitment you share. Let us make your anniversary unforgettable."
+  },
+  {
+    "id": 4,
+    "name": "Engagement Parties",
+    "image": "https://i.ibb.co/6wz2KhM/photo-1507504031003-b417219a0fde-ixlib-rb-4-0.jpg",
+    "price": "Starting at $300",
+    "shortDescription": "Host the perfect engagement party with our event planning services.",
+    "fullDescription": "Your engagement is a special moment, and your engagement party should be just as special. We specialize in creating engagement parties that capture the excitement and joy of this chapter in your life. From decorations to catering, we handle it all."
+  },
+  {
+    "id": 5,
+    "name": "Retirement Parties",
+    "image": "https://i.ibb.co/SJbdyz6/premium-photo-1681841285063-e41cec1b3346-ixlib-rb-4-0.jpg",
+    "price": "Starting at $400",
+    "shortDescription": "Plan retirement celebrations that reflect a lifetime of achievements.",
+    "fullDescription": "Retirement is a time to celebrate a lifetime of hard work and accomplishments. Let us help you plan a retirement party that honors the retiree's achievements and creates lasting memories for all. We take care of every detail to ensure a memorable event."
+  },
+  {
+    "id": 6,
+    "name": "Baby Showers",
+    "image": "https://i.ibb.co/gDCzKSV/photo-1519689680058-324335c77eba-ixlib-rb-4-0.jpg",
+    "price": "Starting at $200",
+    "shortDescription": "Welcome a new addition to the family with our baby shower planning.",
+    "fullDescription": "Expecting a new addition to the family? Celebrate with a beautiful baby shower organized by our team. We specialize in creating warm and welcoming environments for parents-to-be. From decorations to games, we make sure it's a day to remember."
+  }
+]
