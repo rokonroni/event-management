@@ -14,7 +14,7 @@ const Banner = () => {
             backgroundSize: "cover"
           }}
         >
-          <div className="hero-overlay flex  w-full py-48 bg-opacity-60">
+          <div className="hero-overlay flex  w-full py-48 bg-opacity-50">
             <div className="hero-content mx-auto text-center text-white">
               <div className="w-full flex-col">
                 <h1 className="mb-5 lg:text-7xl md:text-4xl text-3xl font-bold">
@@ -53,7 +53,7 @@ const Banner = () => {
             backgroundSize: "cover"
           }}
         >
-          <div className="hero-overlay flex w-full py-48 bg-opacity-60">
+          <div className="hero-overlay flex w-full py-48 bg-opacity-50">
             <div className="hero-content mx-auto text-center text-white">
               <div className="w-full flex-col">
                 <h1 className="mb-5 lg:text-7xl md:text-4xl text-3xl font-bold">
@@ -92,7 +92,7 @@ const Banner = () => {
             backgroundSize: "cover"
           }}
         >
-          <div className="hero-overlay flex w-full py-48 bg-opacity-60">
+          <div className="hero-overlay flex w-full py-48 bg-opacity-50">
             <div className="hero-content mx-auto text-center text-white">
               <div className="w-full flex-col">
                 <h1 className="mb-5 lg:text-7xl md:text-4xl text-3xl font-bold">
@@ -131,7 +131,7 @@ const Banner = () => {
             backgroundSize: "cover"
           }}
         >
-          <div className="hero-overlay flex  w-full lg:py-48 md:py-10 py-0 bg-opacity-60">
+          <div className="hero-overlay flex  w-full lg:py-48 md:py-10 py-0 bg-opacity-50">
             <div className="hero-content mx-auto text-center text-white">
               <div className="w-full flex-col">
                 <h1 className="mb-5 lg:text-7xl md:text-4xl text-3xl font-bold">

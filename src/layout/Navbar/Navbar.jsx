@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
        <div className="container mx-auto">
-          <div className="fixed z-10 text-white bg-transparent container mx-auto">
+          <div className="fixed z-10 text-blue-600 bg-transparent container mx-auto">
       <div className="navbar mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -74,14 +74,14 @@ const Navbar = () => {
                             <p>{user.displayName}</p>
                             <button 
                             onClick={logOut}
-                            className="btn btn-sm bg-transparent text-white border-white hover:bg-transparent hover:text-red-600 hover:font-bold hover:border-red-600 ">Log out</button>
+                            className="btn btn-sm bg-transparent text-blue-600 border-blue-600 hover:bg-transparent hover:text-red-600 hover:font-bold hover:border-red-600 ">Log out</button>
                             <div className="w-10 h-10 rounded-full border overflow-hidden">
                                     <img src={user?.photoURL ? user?.photoURL : defultURL} />
                               </div>
                         </div>
                             :
                             <Link to='/login'>
-                                <button className="btn btn-sm  btn-ghost">Login</button>
+                                <button className="btn btn-sm bg-transparent text-blue-600 border-blue-600 hover:bg-transparent hover:text-red-600 hover:font-bold hover:border-red-600 ">Login</button>
                             </Link>
                     }
                 </div>

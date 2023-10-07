@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import { Link } from "react-router-dom";
 import Navbar from "../../layout/Navbar/Navbar";
 import { useContext } from "react";
@@ -5,7 +6,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const Register = () => {
-  const { signUp, googleLogin, user } = useContext(AuthContext);
+  const { signUp, googleLogin } = useContext(AuthContext);
 
   const handleSocialLogin = (media) => {
     media()
@@ -52,7 +53,7 @@ const Register = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
+      <div className="relative pt-20 flex flex-col justify-center min-h-screen overflow-hidden">
         <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
           <h1 className="text-3xl font-semibold text-center text-red-500 uppercase">
             Register

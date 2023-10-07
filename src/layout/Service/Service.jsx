@@ -1,5 +1,5 @@
-
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Service = ({service}) => {
   const { id, name, image, price , shortDescription } = service;
@@ -23,12 +23,15 @@ const Service = ({service}) => {
                <p>Price: {price}USD</p>
           </div>
         <div className="card-actions">
-          <button
-            onClick={() => handleSelect(card)}
-            className="btn w-3/4 mx-auto mb-6 bg-blue-600 hover:bg-blue-900 p-2 font-semibold rounded-lg text-white"
+           <Link className='w-full text-center' to={`/serviceDetails/${id}`}> 
+             <button
+            className="btn w-3/4 mb-6 bg-blue-600 hover:bg-blue-900 p-2 font-semibold rounded-lg text-white"
           >
             See Details
           </button>
+
+           </Link>
+         
         </div>
       </div>
       </div>
