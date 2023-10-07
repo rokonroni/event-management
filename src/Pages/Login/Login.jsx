@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../layout/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -6,10 +6,14 @@ import Swal from "sweetalert2";
 
 const Login = () => {
   const { signIn, googleLogin } = useContext(AuthContext);
-
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleSocialLogin = (media) => {
     media()
-      .then((res) => console.log(res))
+      .then((res) => {
+        Swal.fire("Login Successful!", "Welcome to our website!", "success");
+        navigate(location?.state ? location.state : '/');
+      })
       .catch((err) => console.log(err));
   };
 
@@ -20,6 +24,10 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         Swal.fire("Login Successful!", "Welcome to our website!", "success");
+
+
+        navigate(location?.state ? location.state : '/');
+
       })
       .catch((error) => console.log(error.massage));
   };

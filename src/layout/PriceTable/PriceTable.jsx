@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 
 const PriceTable = () => {
   return (
-    <div className="bg-blue-600 py-10">
+    <div className="bg-blue-500 py-10">
+        <h1 className="text-5xl mb-2 text-white text-center font-bold">Pricing</h1>
+            <p className="text-white text-center">The best price in the town</p>
       <div className="w-full bg-blue pt-8">
         <div className="flex flex-col sm:flex-row justify-center mb-6 sm:mb-0">
           <div className="flex-1 lg:flex-initial lg:w-1/4 rounded-t-lg rounded-tr-none rounded-bl-lg bg-white mt-4 flex flex-col">

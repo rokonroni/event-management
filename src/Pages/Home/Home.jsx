@@ -4,6 +4,7 @@ import Banner from "../../layout/Banner/Banner";
 import NavBar from "../../layout/Navbar/Navbar";
 import Services from "../../layout/Services/Services";
 import PriceTable from "../../layout/PriceTable/PriceTable";
+import AboutUs from "../../layout/AboutUs/AboutUs";
 
 const Home = () => {
  const data = useLoaderData()
@@ -13,6 +14,7 @@ const Home = () => {
       <Banner></Banner>
       <Services data={data}></Services>
       <PriceTable></PriceTable>
+      <AboutUs></AboutUs>
     </div>
   );
 };
