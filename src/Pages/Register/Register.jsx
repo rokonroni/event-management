@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-escape */
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../layout/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -8,15 +8,18 @@ import { updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { signUp, googleLogin, githubLogin } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleSocialLogin = (media) => {
     media()
-      .then((result) => {
+      .then(() => {
         Swal.fire(
           "Registration Successful!",
           "Welcome to our website!",
           "success"
         );
+        navigate(location?.state ? location.state : '/');
       })
       .catch((error) => {
         Swal.fire({
@@ -24,7 +27,6 @@ const Register = () => {
           title: "Oops...",
           text: `${error.massage}`,
         });
-        console.log(error.massage);
       });
   };
   const handleSubmit = (e) => {
@@ -51,6 +53,7 @@ const Register = () => {
           "Welcome to our website!",
           "success"
         );
+        navigate(location?.state ? location.state : '/');
         updateProfile(result.user, {
           displayName: name,
           photoURL: img,
@@ -68,13 +71,12 @@ const Register = () => {
           title: "Oops...",
           text: `${error.massage}`,
         });
-        console.log(error.massage);
       });
   };
   return (
     <>
       <Navbar></Navbar>
-      <div className="relative pt-20 flex flex-col justify-center min-h-screen overflow-hidden">
+      <div className="relative py-20 flex flex-col justify-center min-h-screen overflow-hidden">
         <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
           <h1 className="text-3xl font-semibold text-center text-red-500 uppercase">
             Register

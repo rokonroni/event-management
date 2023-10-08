@@ -5,16 +5,16 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const { signIn, googleLogin } = useContext(AuthContext);
+  const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const handleSocialLogin = (media) => {
     media()
-      .then((res) => {
+      .then(() => {
         Swal.fire("Login Successful!", "Welcome to our website!", "success");
         navigate(location?.state ? location.state : '/');
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err.massage));
   };
 
   const handleSubmit = (e) => {
@@ -22,20 +22,24 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     signIn(email, password)
-      .then((result) => {
+      .then(() => {
         Swal.fire("Login Successful!", "Welcome to our website!", "success");
-
-
         navigate(location?.state ? location.state : '/');
 
       })
-      .catch((error) => console.log(error.massage));
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: `${error.massage}`,
+        });
+      });
   };
 
   return (
     <>
       <Navbar></Navbar>
-      <div className="relative  pt-20 flex flex-col justify-center min-h-screen overflow-hidden">
+      <div className="relative py-20 flex flex-col justify-center min-h-screen overflow-hidden">
         <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
           <h1 className="text-3xl font-semibold text-center text-red-500 uppercase">
             Log in
@@ -90,7 +94,7 @@ const Login = () => {
               </svg>
             </button>
             <button
-              //   onClick={() => handleSocialLogin(gitHubLogin)}
+                onClick={() => handleSocialLogin(githubLogin)}
               className="flex items-center justify-center w-full p-2 border border-gray-600 rounded-md hover:border-blue-400 hover:text-white hover:bg-blue-400 focus:ring-2 focus:ring-offset-1 focus:ring-blue-600"
             >
               <svg

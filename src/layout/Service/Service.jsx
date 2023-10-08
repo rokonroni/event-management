@@ -10,7 +10,7 @@ const Service = ({service}) => {
         <figure>
           <img src={image} alt="Shoes" className="rounded-xl mx-auto w-full" />
         </figure>
-        <div className="card-body  items-center">
+        <div className="card-body items-center">
           <h2 className="card-title font-bold text-2xl">{name}</h2>
           <p className="text-justify text-gray-500">
             {shortDescription}
@@ -20,7 +20,7 @@ const Service = ({service}) => {
       <div className="space-y-3">
           <div className="text-gray-800 text-center text-lg font-bold">
             
-               <p>Price: {price}USD</p>
+               <p>Price: {price} USD</p>
           </div>
         <div className="card-actions">
            <Link className='w-full text-center' to={`/serviceDetails/${id}`}> 
