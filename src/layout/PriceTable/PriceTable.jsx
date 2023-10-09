@@ -6,7 +6,7 @@ const PriceTable = () => {
         <h1 className="text-5xl mb-2 text-white text-center font-bold">Pricing</h1>
             <p className="text-white text-center">The best price in the town</p>
       <div className="w-full bg-blue pt-8">
-        <div className="flex flex-col lg:flex-row px-6 container mx-auto justify-center mb-6 sm:mb-0">
+        <div className="flex flex-col lg:flex-row px-6 lg:px-0 container mx-auto justify-center mb-6 sm:mb-0">
           <div data-aos="fade-up" className="flex-1 lg:flex-initial lg:w-1/4 rounded-lg lg:rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg bg-white mt-4 -mr-1 flex flex-col">
             <div className="p-8 text-3xl font-bold text-center">Basic Package</div>
             <div className="border-0 border-grey-light border-t border-solid text-sm">

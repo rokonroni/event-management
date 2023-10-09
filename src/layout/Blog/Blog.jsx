@@ -3,9 +3,9 @@ const Blog = ({ blog }) => {
   const { img, title, description, posted_time } = blog;
   return (
     <>
-      <div className="mt-8 container mx-auto lg:flex lg:items-center shadow-lg py-6">
+      <div data-aos="fade-up" className="mt-8 container mx-auto lg:flex lg:items-center shadow-lg py-6">
         <img
-          className="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-48"
+          className="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-full"
           src={img}
           alt=""
         />
@@ -19,10 +19,10 @@ const Blog = ({ blog }) => {
           <p className="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
             {description}
           </p>
-          <p>{posted_time}</p>
+          <p className="mt-4 text-gray-400">Posted Date: {posted_time}</p>
           <a
             href="#"
-            className="inline-block mt-2 text-blue-500 underline hover:text-blue-400"
+            className="inline-flex mt-3 items-center justify-center px-8 py-3 text-base font-normal text-center text-white rounded-lg bg-primary hover:bg-opacity-90 lg:px-8 xl:px-10"
           >
             Read more
           </a>

@@ -3,6 +3,7 @@ import Navbar from "../../layout/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
@@ -44,6 +45,9 @@ const Login = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Login</title>
+    </Helmet>
       <Navbar></Navbar>
       <div className="relative py-20 flex flex-col justify-center min-h-screen overflow-hidden">
         <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">

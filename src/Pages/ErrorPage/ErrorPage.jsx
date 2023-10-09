@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet-async";
+
 const ErrorPage = () => {
   return (
     <section className="relative z-10 bg-primary pt-[30vh] h-[100vh]">
+      <Helmet>
+        <title>Page not Found</title>
+      </Helmet>
       <div className="container ">
         <div className="flex -mx-4">
           <div className="w-full px-4">

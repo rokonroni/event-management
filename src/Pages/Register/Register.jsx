@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { signUp, googleLogin, githubLogin } = useContext(AuthContext);
@@ -79,6 +80,7 @@ const Register = () => {
   };
   return (
     <>
+    <Helmet>Registration</Helmet>
       <Navbar></Navbar>
       <div className="relative py-20 flex flex-col justify-center min-h-screen overflow-hidden">
         <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">

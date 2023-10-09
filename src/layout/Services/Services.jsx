@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Services = ({data}) => {
 
     return (
-        <div className="my-6 container mx-auto md:px-6 lg:px-0">
+        <div className="my-6 container mx-auto px-6 lg:px-0">
             <h1 className="text-5xl mb-2 text-center font-bold">Our Services</h1>
             <p className="text-center">Transforming Occasions into Unforgettable Experiences</p>
             <div className="grid grid-cols-1 md:grid-cols-2 mt-6 lg:grid-cols-3 gap-3">

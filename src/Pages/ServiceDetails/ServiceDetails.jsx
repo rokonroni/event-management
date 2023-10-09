@@ -26,7 +26,7 @@ const ServiceDetails = () => {
         <p className="text-red-600 mt-3">{service.price}</p>
           </div>
         <p className="text-lg mt-3 font-normal">{service.fullDescription}</p>
-        <Link to='/'> 
+        <Link to='/contact'> 
              <button
             className="btn px-4 my-6 bg-blue-600 hover:bg-blue-900 p-2 font-semibold rounded-lg text-white"
           >
