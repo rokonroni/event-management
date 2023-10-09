@@ -24,7 +24,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/blog"
+          to="/blogs"
           className={({ isActive, isPending }) =>
             isPending
               ? "bg-none"
@@ -33,7 +33,7 @@ const Navbar = () => {
               : "font-bold text-lg underline hover:bg-transparent hover:text-[#FF444A] focus:bg-white focus:text-[#FF444A]"
           }
         >
-          Blog
+          Blogs
         </NavLink>
       </li>
       <li>
@@ -55,7 +55,7 @@ const Navbar = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="fixed z-10 text-blue-600 bg-transparent container mx-auto">
+      <div className="fixed z-30  text-blue-600 bg-transparent container mx-auto">
         <div className="navbar mx-auto">
           <div className="navbar-start">
             <div className="dropdown">
@@ -82,8 +82,8 @@ const Navbar = () => {
                 {NavLinks}
               </ul>
             </div>
-            <a href="/" className="normal-case text-4xl font-bold">
-              Event <span className="text-red-600 "> Management</span>
+            <a href="/" className="normal-case lg:text-3xl text-xl font-semibold">
+              RR Event <span className="text-red-600 "> Management</span>
             </a>
           </div>
           <div className="navbar-center  hidden lg:flex ">
@@ -92,14 +92,14 @@ const Navbar = () => {
           <div className="navbar-end">
             {user?.email ? (
               <div className="flex gap-2 items-center">
-                <p className="font-bold">{user.displayName}</p>
+                <p className="lg:font-bold text-sm md:text-base">{user.displayName}</p>
                 <button
                   onClick={logOut}
                   className="btn btn-sm bg-transparent text-blue-600 border-blue-600 hover:bg-transparent hover:text-red-600 hover:font-bold hover:border-red-600 "
                 >
                   Log out
                 </button>
-                <div className="w-10 h-10 rounded-full border overflow-hidden">
+                <div className="md:w-10 md:h-10 rounded-full border overflow-hidden">
                   <img src={user?.photoURL ? user?.photoURL : defultURL} />
                 </div>
               </div>

@@ -6,8 +6,8 @@ const PriceTable = () => {
         <h1 className="text-5xl mb-2 text-white text-center font-bold">Pricing</h1>
             <p className="text-white text-center">The best price in the town</p>
       <div className="w-full bg-blue pt-8">
-        <div className="flex flex-col sm:flex-row justify-center mb-6 sm:mb-0">
-          <div className="flex-1 lg:flex-initial lg:w-1/4 rounded-t-lg rounded-tr-none rounded-bl-lg bg-white mt-4 flex flex-col">
+        <div className="flex flex-col lg:flex-row px-6 container mx-auto justify-center mb-6 sm:mb-0">
+          <div data-aos="fade-up" className="flex-1 lg:flex-initial lg:w-1/4 rounded-lg lg:rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg bg-white mt-4 -mr-1 flex flex-col">
             <div className="p-8 text-3xl font-bold text-center">Basic Package</div>
             <div className="border-0 border-grey-light border-t border-solid text-sm">
               <div className="text-center border-0 border-grey-light border-b border-solid py-4">
@@ -20,7 +20,7 @@ const PriceTable = () => {
                 Venue Selection Assistance
               </div>
               <div className="text-center border-0 border-grey-light border-b border-solid py-4">
-                Vendor Coordination (up to 3 vendors)
+                Single Vendor Coordination
               </div>
               <div className="text-center border-0 border-grey-light border-b border-solid py-4">
                 Budget Planning
@@ -32,11 +32,11 @@ const PriceTable = () => {
             </div>
             <div className="text-center pt-8 mb-8 mt-auto">
               <button className="btn w-3/4 mb-6 bg-blue-600 hover:bg-blue-900 p-2 font-semibold rounded-lg text-white">
-                <Link to="/register">Book Now</Link>
+                <Link to="/contact">Book Now</Link>
               </button>
             </div>
           </div>
-          <div className="flex-1 lg:flex-initial lg:w-1/4 rounded-t-lg bg-white mt-4 sm:-mt-4 shadow-lg z-30 flex flex-col">
+          <div data-aos="zoom-in" className="flex-1 rounded-lg lg:flex-initial lg:w-1/4 lg:rounded-t-lg bg-white mt-4 lg:-mt-4 shadow-lg z-10 flex flex-col">
             <div className="w-full p-8 text-3xl font-bold text-center">
               Premium Package
             </div>
@@ -64,11 +64,11 @@ const PriceTable = () => {
             
             <div className="w-full text-center mb-8 mt-auto">
               <button className="btn w-3/4 mb-6 bg-green-600 hover:bg-green-900 p-2 font-semibold rounded-lg text-white">
-                <Link to="/register">Book Now</Link>
+                <Link to="/contact">Book Now</Link>
               </button>
             </div>
           </div>
-          <div className="flex-1 lg:flex-initial lg:w-1/4 rounded-t-lg rounded-tl-none rounded-br-lg bg-white mt-4 flex flex-col">
+          <div data-aos="fade-down" className="flex-1 lg:flex-initial lg:w-1/4 rounded-lg lg:rounded-t-lg lg:rounded-tl-none lg:rounded-br-lg bg-white mt-4 flex -ml-1  flex-col">
             <div className="p-8 text-3xl font-bold text-center">Standard Package</div>
             <div className="border-0 border-grey-light border-t border-solid text-sm">
               <div className="text-center border-0 border-grey-light border-b border-solid py-4">
@@ -93,7 +93,7 @@ const PriceTable = () => {
             </div>
             <div className="text-center pt-8 mb-8 mt-auto">
               <button className="btn w-3/4 mb-6 bg-blue-600 hover:bg-blue-900 p-2 font-semibold rounded-lg text-white">
-                <Link to="/register">Book Now</Link>
+                <Link to="/contact">Book Now</Link>
               </button>
             </div>
           </div>

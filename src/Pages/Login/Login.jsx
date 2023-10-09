@@ -14,7 +14,13 @@ const Login = () => {
         Swal.fire("Login Successful!", "Welcome to our website!", "success");
         navigate(location?.state ? location.state : '/');
       })
-      .catch((err) => console.log(err.massage));
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: `${error}`,
+        });
+      });
   };
 
   const handleSubmit = (e) => {
@@ -31,7 +37,7 @@ const Login = () => {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: `${error.massage}`,
+          text: `${error}`,
         });
       });
   };

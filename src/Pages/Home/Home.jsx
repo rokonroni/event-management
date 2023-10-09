@@ -5,6 +5,7 @@ import NavBar from "../../layout/Navbar/Navbar";
 import Services from "../../layout/Services/Services";
 import PriceTable from "../../layout/PriceTable/PriceTable";
 import AboutUs from "../../layout/AboutUs/AboutUs";
+import WhyChoose from "../../layout/WhyChoose/WhyChoose";
 
 const Home = () => {
  const data = useLoaderData()
@@ -15,6 +16,7 @@ const Home = () => {
       <Services data={data}></Services>
       <PriceTable></PriceTable>
       <AboutUs></AboutUs>
+      <WhyChoose></WhyChoose>
     </div>
   );
 };

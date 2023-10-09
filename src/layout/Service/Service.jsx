@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 const Service = ({service}) => {
   const { id, name, image, price , shortDescription } = service;
   return (
-    <div className="card bg-white rounded-lg shadow-xl space-y-4">
+    <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom" className="card bg-white rounded-lg shadow-xl space-y-4">
       <div className="flex flex-col justify-between h-full gap-3">
         <div>
         <figure>

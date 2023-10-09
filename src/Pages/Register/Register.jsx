@@ -25,7 +25,7 @@ const Register = () => {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: `${error.massage}`,
+          text: `${error}`,
         });
       });
   };
@@ -45,33 +45,37 @@ const Register = () => {
         text: " Password must be 6 characters, at least one uppercase and one special character",
       });
     }
-
-    signUp(email, password)
+    else {
+       signUp(email, password)
       .then((result) => {
         Swal.fire(
           "Registration Successful!",
           "Welcome to our website!",
           "success"
         );
-        navigate(location?.state ? location.state : '/');
         updateProfile(result.user, {
           displayName: name,
           photoURL: img,
         })
           .then(() => {
-            console.log('Profile Updated');
+          console.log('Profile Updated');
+           window.location.reload();
           })
           .catch(() => {
            console.log('Not update');
           });
+        
+        navigate(location?.state ? location.state : '/');
       })
       .catch((error) => {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: `${error.massage}`,
+          text: `${error}`,
         });
       });
+    }
+   
   };
   return (
     <>

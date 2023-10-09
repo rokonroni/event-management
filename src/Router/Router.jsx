@@ -7,7 +7,9 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import PrivateRoute from "./PrivateRoute";
-import Blog from "../Pages/Blog/Blog";
+import Aos from "aos";
+import Blogs from "../Pages/Blogs/Blogs";
+Aos.init();
 
 
 const router = createBrowserRouter([
@@ -36,8 +38,8 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },
       {
-        path : "/blog",
-        element: <PrivateRoute><Blog></Blog></PrivateRoute>
+        path : "/blogs",
+        element: <PrivateRoute><Blogs></Blogs></PrivateRoute>
       },
       {
         path: "/serviceDetails/:id",
