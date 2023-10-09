@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -44,12 +45,12 @@ const AboutUs = () => {
               <p data-aos="flip-up" className="mb-8 text-base text-body-color">
                 We specialize in turning your dreams into reality by designing and managing spectacular events. Our experienced team is dedicated to making your special moments truly unforgettable.
               </p>
-              <a data-aos="slide-up"
-                href="/#"
-                className="inline-flex items-center justify-center px-10 py-4 text-base font-normal text-center text-white rounded-lg bg-primary hover:bg-opacity-90 lg:px-8 xl:px-10"
+              <Link data-aos="slide-up"
+                to="/contact"
+                className="inline-flex items-center justify-center px-10 py-4 text-base text-center text-white rounded-lg bg-primary hover:bg-opacity-90 lg:px-8 xl:px-10 font-bold"
               >
                 Get Started with Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

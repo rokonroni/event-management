@@ -35,6 +35,7 @@ const Login = () => {
 
       })
       .catch((error) => {
+        
         Swal.fire({
           icon: "error",
           title: "Oops...",

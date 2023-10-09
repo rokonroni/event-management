@@ -13,7 +13,7 @@ const Service = ({service}) => {
         </figure>
         <div className="card-body items-center">
           <h2 className="card-title font-bold text-2xl">{name}</h2>
-          <p className="text-justify text-gray-500">
+          <p className="text-center text-gray-500">
             {shortDescription}
           </p>
         </div>
