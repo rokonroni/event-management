@@ -45,7 +45,7 @@ sum(1, "2");
 
 #### Answer: C
 
-<i>Explanation: </i>
+<i>Explanation: JavaScript is a loosely typed language, so it performs type coercion when adding values of different types. In this case, it converts the number 1 to a string and then concatenates it with the string "2", resulting in "12"</i>
 
 </p>
 </details>
@@ -69,9 +69,9 @@ console.log(food);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>Explanation: The info.favoriteFood property is assigned the value "🍝". However, this assignment does not modify the food array, so the food array remains ['🍕', '🍫', '🥑', '🍔'].</i>
 
 </p>
 </details>
@@ -94,9 +94,9 @@ console.log(sayHi());
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>Explanation: The sayHi function expects an argument name, but it is called without any argument. In JavaScript, when a function parameter is not provided with a value, it defaults to undefined. Therefore, the function returns "Hi there, undefined".</i>
 
 </p>
 </details>
@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+<i>Explanation: The forEach method iterates through the nums array, and for each element, it checks if num is truthy (not equal to 0). If num is truthy, it increments the count variable by 1. Since there are two truthy values in the array (1 and 2), the count becomes 2.</i>
 
 </p>
 </details>
