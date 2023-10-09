@@ -1,6 +1,6 @@
 # Event Management Company Website
 
-[**Live Site**](https://rr-event-management.netlify.app/)
+### Live Site: [**RR Event Management**](https://rr-event-management.netlify.app/)
 
 This README.md file provides an overview of the key features of the Event Management Company Website. This website allows users to log in using their email and password or via Google login. It offers various services, each with a details button that can only be accessed by logged-in users. Additionally, the website includes a private blog route and a contact page within the private route.
 
